@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", (e) => {
     messageTwo.textContent = '';
 
     // callback function runs when fetch is done
-    fetch("http://localhost:8000/weather?address=" + location).then((response) => {
+    fetch("/weather?address=" + location).then((response) => {
         // this callback function runs when the JSON data has arrived and been parsed
         response.json().then(({ error, location, forecast }) => {
             if (error) {
